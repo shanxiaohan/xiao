@@ -1,0 +1,13 @@
+<!--每日习惯打卡页面-->
+<import src='./card/card-tpl.wxml' />
+<view class='daily-wrap'>
+  <view class='daily-container'>
+    <block wx:for='{{cards}}' wx:for-item='card'>
+      <template is='cardTemplate' data='{{...card}}'/>
+    </block>
+  </view>
+  <view class='change' wx:if='{{type === "now"}}'>
+    <image class='add-card' src='/static/icon/add.png' catchtap='addCard'></image>
+    <image class='edit-card' src='/static/icon/edit.png' catchtap='editCard'></image>
+  </view>
+</view>

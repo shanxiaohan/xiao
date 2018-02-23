@@ -1,0 +1,9 @@
+<!--pages/fittime/fittime.wxml-->
+<import src='./article/article-tpl.wxml' />
+<scroll-view class='fittime-container' scroll-x='false' scroll-y='true' bindscrolltolower='onScrollLower' >
+  <block wx:for='{{articles}}' wx:for-item='article'>
+    <view catchtap='getDetail' data-fileid='{{article.fileid}}'>
+      <template is='articleTemplate' data='{{...article}}' />
+    </view>
+  </block>
+</scroll-view> 

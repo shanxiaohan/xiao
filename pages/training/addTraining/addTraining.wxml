@@ -1,0 +1,49 @@
+<!--pages/training/addTraining/addTraining.wxml-->
+<view class='training-container'>
+  <view class='training-header'>
+    <!-- <image src='/static/icon/finish.png' class='weight-img'></image>
+    <text>是否完成今日训练</text> -->
+    
+  <view class='training-header-box' bindtap='finishTraining'>
+   <image wx:if='{{is_finish}}' src='/static/icon/finish_sel.png' class='finish-icon'></image>
+   <image wx:else src='/static/icon/finish.png' class='finish-icon'></image>
+    <text class='training-header-title'>{{is_finish ? training_header[1] : training_header[0]}}</text> 
+  </view>
+
+  </view>
+  <view class='training-plan'>
+    <view class='lft-route'>
+      <view class='lft-scroll'>
+        <block wx:for='{{body_parts}}' wx:for-item='body_part'>
+          <view class='body-part' bindtap='changePart' data-id='{{body_part.id}}' style='background-color: {{body_part.id == active_id ? rgt_bkg : "#eee"}}'>
+            <view class='body-part-text'>
+              <text class='body-text' style='color: {{body_part.id == active_id ? "#3d3744" : "#bfbfbf"}}'>{{body_part.label}}</text>
+              <text style='color: {{body_part.id == active_id ? "#bfbfbf" : "#ffffff"}}'>{{part_selected[body_part.id-1]}}</text>
+            </view>
+            <image src='{{body_part.icon_path}}'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='rgt-tab' style='background-color:{{rgt_bkg}}'>
+      <scroll-view class='rgt-tab-scroll' scroll-y='true'>
+        <block wx:for='{{action_sets[active_id-1]}}' wx:for-item='action_item' wx:for-index='action_idx'>
+          <view class='action-box' data-id='{{action_item.id}}'>
+            <image class='action-img' src='{{action_item.icon_path}}'></image>
+            <view class='action-box-content'>
+              <text class='action-box-title'>{{action_item.label}}</text>
+              <picker data-id='{{action_idx}}' mode='multiSelector' value='{{picker_index_arr[active_id-1][action_idx].picker_index}}' range='{{action_item.picker_range}}' bindchange='changePicker'>
+                <view class='action-item-picker-wrap'>
+                  <view wx:for='{{picker_index_arr[active_id-1][action_idx].picker_index}}' wx:for-index='idx' wx:for-item='action_picker_item' id='action-item-picker'>
+                    {{action_item.picker_range[idx][picker_index_arr[active_id-1][action_idx]['picker_index'][idx]]}}
+                  </view>
+                </view>
+              </picker>
+            </view>
+            <icon class='action-box-icon' type='{{picker_index_arr[active_id-1][action_idx].is_select ? "success_circle" : "circle"}}' size='28' bindtap='onSelectAction' data-idx='{{action_idx}}'></icon>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

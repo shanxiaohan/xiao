@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+<view class='calendar-wrap'>
+  <web-view src='https://xiaohan77.cn/article/200039931.html'></web-view>
+</view>

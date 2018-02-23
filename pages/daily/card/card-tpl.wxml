@@ -1,0 +1,16 @@
+<template name="cardTemplate">
+  <view class='card-container'>
+    <view class='check-icon'>
+      <image wx:if="{{isEditing}}" catchtap='tapDel' src='/static/icon/del_sel.png' data-idx='{{idx}}' data-cardId='{{cardId}}'></image>
+      <image wx:elif="{{isChecked}}" bindtap='tapCheck' src='/static/icon/success.png' data-idx='{{idx}}' data-cardId='{{cardId}}'></image>
+      <image wx:else bindtap='tapCheck' src='/static/icon/nosuccess.png' data-idx='{{idx}}' data-cardId='{{cardId}}'></image>
+    </view>
+    <view class='content'>
+      <text class='content-text'>{{content}}</text><br/>
+      <text class='last-days'>已坚持{{lastDays}}天</text>
+    </view>
+    <view class='content-icon'>
+      <image src='{{icon}}'></image>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,5 @@
+<view class='calendar-wrap'>
+    <image class="bkg-img" src='/static/img/1.jpg' mode='widthFit'></image>  
+  <calendar></calendar>
+
+</view>

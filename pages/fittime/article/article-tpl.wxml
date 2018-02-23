@@ -1,0 +1,21 @@
+<template name='articleTemplate'>
+  <view class='article-container'>
+    <view class='lft-block'>
+      <view class='article-wrap'>
+        <view class='header'>
+          <image src='{{icon}}' class='icon'></image>
+          <text class='name'>{{name}}</text>
+        </view>
+        <view class='title-wrap'>
+          <text class='title'>{{title}}</text>
+        </view>
+        <view class='date-wrap'>
+          <text class='date'>{{date}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='rgt-block'>
+      <image src='{{cover}}' class='cover'></image>
+    </view>
+  </view>
+</template>

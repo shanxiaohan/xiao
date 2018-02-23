@@ -1,0 +1,45 @@
+{
+  "pages": [    
+    
+    "pages/calendar/calendar",
+    "pages/daily/daily",
+    "pages/daily/addcard/addcard",
+    "pages/fittime/fittime",
+    "pages/fittime/detail/detail",
+    "pages/training/training",
+    "pages/training/addTraining/addTraining",
+    "pages/index/index",
+    "pages/test/test",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffcccc",
+    "navigationBarTitleText": "小槑好",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "borderStyle": "grey",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "",
+        "iconPath": "static/icon/calendar.png",
+        "selectedIconPath": "static/icon/calendar_sel.png"
+      },
+      {
+        "pagePath": "pages/training/training",
+        "text": "",
+        "iconPath": "static/icon/training.png",
+        "selectedIconPath": "static/icon/training_sel.png"
+      },
+      {
+        "pagePath": "pages/fittime/fittime",
+        "text": "",
+        "iconPath": "static/icon/find.png",
+        "selectedIconPath": "static/icon/find_sel.png"
+      }
+    ]
+  }
+}

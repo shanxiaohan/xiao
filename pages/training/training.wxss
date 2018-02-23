@@ -1,0 +1,55 @@
+/* pages/training/training.wxss */
+page {
+  height: 100%;
+}
+.training-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "微软雅黑";
+  align-content: center;
+  /* align-items: center; */
+   justify-content: space-between; 
+   background-color: #3d3744;
+}
+.charts-container {
+   margin-top: 50rpx;
+   background-color: #3d3744;
+   flex: 1;
+   padding-top: 20rpx;
+}
+.chart-title {
+  margin: 0 auto;
+  text-align: center;
+}
+.chart-title text{
+  color: #ffffff;
+  font-weight: bolder;
+}
+.today-container {
+  width: 100%;
+  height: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #ccffff;
+  justify-content: space-around;
+}
+.plan-box {
+  border: 3px solid #cccccc;
+  border-radius: 75rpx;
+  color: #bfbfbf;
+  width: 450rpx;
+  height: 120rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.add-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 30rpx;
+}

@@ -1,0 +1,15 @@
+<!--pages/training/training.wxml-->
+<view class='training-container'>
+
+<view class='charts-container'>
+  <view class='chart-title'>
+    <text>{{chartTitle}}</text>
+  </view>
+  <canvas canvas-id="pieCanvas" class="canvas" style="background-color:'#3d3744';width:100%;height:350px" bindtouchstart="touchHandler"></canvas>
+</view>
+<view class='today-container'>
+  <view class='plan-box' bindtap='tapPlanBox'>
+   <image src='/static/icon/view.png' class='add-icon'></image> <text>Today Training </text> 
+  </view>
+</view>
+</view>

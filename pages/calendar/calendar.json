@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "calendar": "/components/calendar/calendar",
+    "alert-modal": "/components/modal/modal"
+  }
+}

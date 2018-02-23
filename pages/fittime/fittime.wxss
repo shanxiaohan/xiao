@@ -1,0 +1,10 @@
+/* pages/fittime/fittime.wxss */
+@import './article/article-tpl.wxss';
+page{
+  height: 100%;
+  background-color: #eee;
+}
+ .fittime-container {
+  height: 1300rpx;
+  margin: 0 auto;
+} 

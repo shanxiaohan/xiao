@@ -1,0 +1,17 @@
+<!--pages/daily/addcard/addcard.wxml-->
+<view class='addcard-container'>
+  <view class='input-wrap'>
+    <image class='input-img' src='/static/icon/input.png'></image>
+    <input type='text' placeholder='输入小习惯的内容再选择一个图标哦~' bindblur='handleBlur' bindfocus='handleFocus' confirm-type='done' value='{{content}}'></input>
+    <image wx:if='{{isConfirm}}' class='input-confirm' src='/static/icon/success.png'></image>
+    <image wx:else class='input-confirm' src='/static/icon/confirm_0.png' bindtap='confirmInput'></image>
+  </view>
+  <scroll-view class='icon-wrap'>
+    <block wx:for='{{icons}}' wx:for-item='icon'>
+      <view class='icon-item'>
+        <image wx:if='{{icon.isSelect}}' class='icon-img' src='{{icon.src + "-1.png"}}' bindtap='handleImgCancel' data-id='{{icon.id}}'></image>
+        <image wx:else class='icon-img' src='{{icon.src + "-0.png"}}' bindtap='handleImgSel' data-id='{{icon.id}}'></image>
+      </view>
+    </block>
+  </scroll-view>
+</view>
