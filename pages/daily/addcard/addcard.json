@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "添加小习惯"
+  "navigationBarTitleText": "添加小习惯",
+  "usingComponents": {
+    "alert-modal": "../../../components/modal/modal"
+  }
 }

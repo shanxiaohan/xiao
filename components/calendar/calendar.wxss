@@ -101,15 +101,15 @@
 }
 .past {
   background-color: rgba(172, 194, 194, 0.6);
-
+}
+.now {
+  background-color: rgba(172, 194, 194, 0.6);
 }
 .daily-icon {
   width: 50rpx;
   height: 50rpx;
   margin-top: -15rpx;
   margin-left: 16rpx;
-  /* border-radius: 50%;
-  border: 1rpx dashed #dab08c; */
 }
 @font-face {
     font-family: 'FontAwesome';

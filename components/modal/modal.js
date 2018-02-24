@@ -10,6 +10,14 @@ Component({
 
     //   }
     // }
+    modalText: {
+      type: String,
+      value: '不能对未来打卡哦~'
+    },
+    headIcon: {
+      type: String,
+      value: '/static/icon/modal.png'
+    }
   },
 
   /**
@@ -17,8 +25,8 @@ Component({
    */
   data: {
     modal: {
-      head_icon: '/static/icon/modal.png',
-      modal_text: '不能对未来打卡哦~',
+      // head_icon: '/static/icon/modal.png',
+      // modal_text: '不能对未来打卡哦~',
       modal_footer: ''
     },
     show_modal: true,
@@ -36,6 +44,7 @@ Component({
   // },
 
   attached: function () {
+    console.log(this.data.modalText, this.data.headIcon);
     // show-modal
     setTimeout(() => {
       let showModalAnimation = wx.createAnimation({

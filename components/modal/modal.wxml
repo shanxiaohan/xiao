@@ -2,11 +2,11 @@
   <view wx:if='{{show_modal}}' class='modal-border' animation="{{animation_modal}}">
     <view class='modal-header'>
       <view>
-        <image animation="{{animation_img}}" src='{{modal.head_icon}}' class='modal-header-icon'></image>
+        <image animation="{{animation_img}}" src='{{headIcon}}' class='modal-header-icon'></image>
       </view>
     </view>
     <view class='modal-content'>
-      <text>{{modal.modal_text}}</text>
+      <text>{{modalText}}</text>
     </view>
     <view wx:if='{{modal.modal_footer}}' class='modal-footer'></view>
   </view>

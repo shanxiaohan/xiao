@@ -11,7 +11,9 @@ Page({
     isConfirm: false,
     content: '',
     icon_id: '',
-    date: ''
+    date: '',
+    show_modal: false,
+    modal_text: ''
   },
 
   /**
@@ -49,7 +51,25 @@ Page({
     this.setData({
       isConfirm: true
     });
+   
     let {content, icon_id} = this.data;
+    console.log(content, icon_id, 'content%%%%');
+    if (!content || !icon_id) {
+      console.log('show alert modal!');
+      this.setData({
+        show_modal: true,
+        modal_text: !content ? '内容不能为空喔~' : '别忘了选一个喜欢的图标~'
+      });
+      setTimeout(() => {
+        this.setData({
+          show_modal: false,
+          isConfirm: false,
+          icon_id: '',
+          modal_text: ''
+        });
+      }, 4000);
+      return;
+    }
     // 更新全局card数据，同时返回页面时更新当日打卡绑定的数据
     let globalCards = appData.static_cards,
       keys = Object.keys(globalCards).sort(),
@@ -98,7 +118,10 @@ Page({
     let icon_id = parseInt(e.currentTarget.dataset.id);
     let icons = this.data.icons;
     icons[icon_id - 1]['isSelect'] = false;
-    this.setData({ icon_id, icons });
+    this.setData({ 
+      icon_id: '',
+      icons
+    });
   },
 
   /**

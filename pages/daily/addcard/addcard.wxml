@@ -1,5 +1,6 @@
 <!--pages/daily/addcard/addcard.wxml-->
 <view class='addcard-container'>
+  <alert-modal wx:if='{{show_modal}}' modal-text='{{modal_text}}'></alert-modal>
   <view class='input-wrap'>
     <image class='input-img' src='/static/icon/input.png'></image>
     <input type='text' placeholder='输入小习惯的内容再选择一个图标哦~' bindblur='handleBlur' bindfocus='handleFocus' confirm-type='done' value='{{content}}'></input>
