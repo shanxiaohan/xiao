@@ -22,7 +22,6 @@ page {
 .training-header-box {
   width: 100%;
   height: 30%; 
-
   border: 3px solid #cccccc;
   border-radius: 75rpx;
   color: #bfbfbf;
@@ -143,13 +142,14 @@ page {
   width: 100%;
   align-items: center;
 }
-.action-item-picker {
-  flex: 1;
+#action-item-picker {
+  /* flex: 1; */
+  font-weight: bold; 
 }
 picker {
   width: 70%;
 }
 .action-picker {
   font-size: 32rpx;
-  /* font-weight: bold; */
+   font-weight: bold; 
 }

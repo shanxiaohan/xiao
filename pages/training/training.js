@@ -15,7 +15,7 @@ Page({
     series: [{
       name: '体能',
       data: 0,
-      color: '#AC92EC'
+      color: '#ccff99'
     }, {
       name: '胸',
       data: 1,
@@ -39,7 +39,7 @@ Page({
     }, {
       name: '臀腿',
       data: 0,
-      color: '#ccff99',
+      color: '#AC92EC',
       // format
     }, {
       name: '腰腹',
@@ -146,14 +146,12 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log('Hide111****');
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log('onUnload111****');
   },
 
   /**

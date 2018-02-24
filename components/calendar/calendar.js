@@ -24,6 +24,13 @@ Component({
 
   attached: function() {
     this._initCalendar();
+    console.log('attached&&&&');
+  },
+  ready: function() {
+    console.log('ready&&&');
+  },
+  created: function() {
+    console.log('created&&&');
   },
 
   // relations: {

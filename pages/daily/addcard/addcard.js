@@ -76,7 +76,6 @@ Page({
     // 更新缓存
     let hist_store = wx.getStorageSync('dailyCheck');
     hist_store[this.data.date] = utils.fromPageToStore(cards);
-    console.log(hist_store[this.data.date], '****&&&%@#$%^&');
     // let new_store = utils.fromPageToStore(prePage.data);
     // Object.assign(hist_store, new_store);
     wx.setStorageSync('dailyCheck', hist_store);

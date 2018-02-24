@@ -609,7 +609,7 @@ const body_parts = [
     "part": "aerobic",
     "label": "体能",
     "icon_path": "/static/icon/bodyparts/aerobic.png",
-    "bkg": "#AC92EC",
+    "bkg": "#ccff99",
     "is_active": true,
     "select_count": 0
   }, {
@@ -649,7 +649,7 @@ const body_parts = [
     "part": "aerobic",
     "label": "臀腿",
     "icon_path": "/static/icon/bodyparts/legs.png",
-    "bkg": "#ccff99",
+    "bkg": "#AC92EC",
     "is_active": false,
     "select_count": 0
   }, {

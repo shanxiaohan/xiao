@@ -1,9 +1,6 @@
 <!--pages/training/addTraining/addTraining.wxml-->
 <view class='training-container'>
-  <view class='training-header'>
-    <!-- <image src='/static/icon/finish.png' class='weight-img'></image>
-    <text>是否完成今日训练</text> -->
-    
+  <view class='training-header'>    
   <view class='training-header-box' bindtap='finishTraining'>
    <image wx:if='{{is_finish}}' src='/static/icon/finish_sel.png' class='finish-icon'></image>
    <image wx:else src='/static/icon/finish.png' class='finish-icon'></image>
